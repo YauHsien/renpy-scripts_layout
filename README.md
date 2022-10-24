@@ -19,14 +19,13 @@ Step 2, execute `swipl` to enter its REPL interface, a command-line interface.
 
 Step 3, consult a set of Ren'Py scripts.
 
-    ```
     ?- renpy_scripts:layout("/path/to/a/renpy/game/root/folder", R).
     R = [
       "/path/to/a/renpy/game/root/folder/game/first_script.rpy",
       "/path/to/a/renpy/game/root/folder/game/second_script.rpy",
       |...
     ].
-    ```
+
 At this step, call-relations will be loaded, then the database is ready to be consulted.
 
 Ren'Py dev uses `call some_label (arg1, arg2) from some_save_point` statement
@@ -35,12 +34,11 @@ to put save-point while calling some label.
 So, at tep 4, you may want to consult the database to know one or more paths
 going to some save-point.
 
-    ```
     ?- renpy_scripts:python_save_point_path("some_save_point", Path).
     Path = "[u'sp_1',u'sp_2', ..., u'some_save_point']" ;
     Path = ...
-    ...
-    ```
+    ....
+
     
 And, as we know, call-branches in Ren'Py are not context-free.
 In some sandbox game, more than one characters share the same scene, and
