@@ -20,11 +20,8 @@ Step 2, execute `swipl` to enter its REPL interface, a command-line interface.
 Step 3, consult a set of Ren'Py scripts.
 
     ?- renpy_scripts:layout("/path/to/a/renpy/game/root/folder", R).
-    R = [
-      "/path/to/a/renpy/game/root/folder/game/first_script.rpy",
-      "/path/to/a/renpy/game/root/folder/game/second_script.rpy",
-      |...
-    ].
+    R = ["/path/to/a/renpy/game/root/folder/game/first_script.rpy",
+         "/path/to/a/renpy/game/root/folder/game/second_script.rpy",|...].
 
 At this step, call-relations will be loaded, then the database is ready to be consulted.
 
